@@ -1,10 +1,10 @@
-// 19: Авиакомпания 3. Наследование
+// Задание 19: Авиакомпания 3. Наследование
 // Создадим наследника класса Aircraft с названием Boeing747 и добавим ему свойство, обозначающее вместимость пассажиров
 fun main(){
-    Boeing747("Боинг 747-800", 50000f, 200, 100).getInfo()
+    Boeing747FirstVersion("Боинг 747-800", 50000f, 200, 100).getInfo()
 }
 
-class Boeing747 (number: String, maxFlightDistance: Float, tankCapacity: Int, private var passengerCapacity: Int) : AircraftThirdVersion(number, maxFlightDistance, tankCapacity) {
+class Boeing747FirstVersion (number: String, maxFlightDistance: Float, tankCapacity: Int, private var passengerCapacity: Int) : AircraftThirdVersion(number, maxFlightDistance, tankCapacity) {
     override fun getInfo(){
         super.getInfo()
         println("Вместимость пассажиров - $passengerCapacity человек")
