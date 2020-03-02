@@ -4,10 +4,10 @@
 // Установите значения по своему усмотрению.
 // Переопределите геттер свойства содержащего расход топлива, чтобы он самостоятельно рассчитывался из свойств дальности полета и вместимости бака.
 fun main(){
-    Aircraft("Боинг 737-800", 50000f, 200).getInfo()
+    AircraftFirstVersion("Боинг 737-800", 50000f, 200).getInfo()
 }
 
-class Aircraft() {
+class AircraftFirstVersion() {
     constructor(number: String, maxFlightDistance: Float,tankCapacity: Int): this(){
         this.number = number
         this.maxFlightDistance = maxFlightDistance
