@@ -5,7 +5,7 @@ fun main(){
 }
 
 class Boeing747ThirdVersion (number: String, maxFlightDistance: Float, tankCapacity: Int, override var passengerCapacity: Int)
-    : AircraftThirdVersion(number, maxFlightDistance, tankCapacity), Passenger {
+    : AircraftFourVersion(number, maxFlightDistance, tankCapacity), Passenger {
     override fun getInfo(){
         super.getInfo()
         println("Вместимость пассажиров - $passengerCapacity человек")
