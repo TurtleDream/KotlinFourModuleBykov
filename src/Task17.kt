@@ -7,7 +7,17 @@ fun main(){
     Aircraft("Боинг 737-800", 50000f, 200).getInfo()
 }
 
-class Aircraft(private val number: String, private val maxFlightDistance: Float, private val tankCapacity: Int) {
+class Aircraft() {
+    constructor(number: String, maxFlightDistance: Float,tankCapacity: Int): this(){
+        this.number = number
+        this.maxFlightDistance = maxFlightDistance
+        this.tankCapacity = tankCapacity
+    }
+
+    private var number: String = "Ту-50"
+    private var maxFlightDistance: Float = 100000f
+    private var tankCapacity: Int = 500
+
     private val fuelConsumptionPer100Km: Float
     get() {
         return (100 * tankCapacity) / maxFlightDistance
